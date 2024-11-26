@@ -15,7 +15,54 @@ export default function Hero() {
     >
       <Navigation />
 
-      <div className="container mx-auto px-6 mt-20 md:mt-32 relative z-10 text-left">
+      {/* Stars */}
+      <div className="absolute inset-0 overflow-hidden z-0 pointer-events-none">
+        {[...Array(80)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-white rounded-full"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              opacity: Math.random() * 0.6 + 0.4,
+            }}
+            animate={{
+              opacity: [0.4, 1, 0.4],
+            }}
+            transition={{
+              duration: Math.random() * 3 + 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+
+        {/* Comet */}
+        {[...Array(1)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-gradient-to-br from-blue-400 via-cyan-300 to-transparent rounded-full shadow-lg"
+            style={{
+              top: `${Math.random() * 50}%`,
+              left: `${-10}%`,
+            }}
+            animate={{
+              x: ["0%", "150%"],
+              y: ["0%", "50%"],
+              opacity: [1, 0],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              delay: Math.random() * 5,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Hero */}
+      <div className="container mx-auto px-6 py-20 mt-40 md:mt-40 relative z-10 text-left">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
