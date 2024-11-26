@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0B1221;
+  --card-background: rgba(26, 35, 51, 0.5);
+  --accent: #FFB800;
+}
+
+body {
+  background-color: var(--background);
+  color: white;
+}
+
+.mono {
+  font-family: 'Space Mono', monospace;
+}
+
+.glass-card {
+  background: var(--card-background);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.curved-line {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.curved-line::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateY(-50%) rotate(-5deg);
+}
+
