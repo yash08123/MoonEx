@@ -21,7 +21,7 @@ export default function Comparison() {
           viewport={{ once: true }}
           className="text-4xl font-bold mb-16 text-center"
         >
-          Why <span className="text-yellow-400  ">MoonEX</span>?
+          Why <span className="text-yellow-400  ">MoonEX </span>?
         </motion.h2>
 
         {/* Comparison */}
@@ -29,10 +29,10 @@ export default function Comparison() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="bg-[#1A2333] rounded-lg overflow-hidden shadow-md"
+          className="bg-[#1A2333] rounded-lg mx-24 overflow-hidden shadow-md"
         >
           {/* Table Header */}
-          <div className="grid grid-cols-3 py-4 px-6 border-b border-[#2A3447] bg-[#131A2A]">
+          <div className="grid grid-cols-3 py-4 px-12 border-b border-[#2A3447] bg-[#131A2A]">
             <div className="text-yellow-400 font-bold text-center">
               Comparison
             </div>
